@@ -37,7 +37,7 @@ func (i *Investor) UpdateAssetPosition(assetID string, qtdShares int) {
 	}
 }
 
-func (i *Investor) AssAssetPosition(assetPosition *InvestorAssetPosition) {
+func (i *Investor) AddAssetPosition(assetPosition *InvestorAssetPosition) {
 	i.AssetPosition = append(i.AssetPosition, assetPosition)
 }
 
