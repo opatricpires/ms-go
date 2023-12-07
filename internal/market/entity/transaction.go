@@ -35,21 +35,21 @@ func (t *Transaction) CalculateTotal(Shares int, price float64) {
 }
 
 func (t *Transaction) CloseBuyOrder() {
-	if t.BuyingOrder.PendindShares == 0 {
+	if t.BuyingOrder.PendingShares == 0 {
 		t.BuyingOrder.Status = "CLOSED"
 	}
 }
 
 func (t *Transaction) CloseSellOrder() {
-	if t.SellingOrder.PendindShares == 0 {
+	if t.SellingOrder.PendingShares == 0 {
 		t.SellingOrder.Status = "CLOSED"
 	}
 }
 
 func (t *Transaction) AddBuyOrderPendingShares(shares int) {
-	t.BuyingOrder.PendindShares += shares
+	t.BuyingOrder.PendingShares += shares
 }
 
 func (t *Transaction) AddSellOrderPendingShares(shares int) {
-	t.SellingOrder.PendindShares += shares
+	t.SellingOrder.PendingShares += shares
 }
